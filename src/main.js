@@ -12,3 +12,8 @@ new Vue({
   vueApexChats,
   render: h => h(App)
 }).$mount('#app')
+
+
+Vue.use(excel);
+Vue.use(vueApexChats);
+Vue.component('apexcharts', vueApexChats);
