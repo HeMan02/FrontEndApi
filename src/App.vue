@@ -13,7 +13,7 @@
             <v-icon>mdi-heart</v-icon>
           </v-btn>
 
-          <v-btn icon>
+          <v-btn icon @click="GoToLevel1">
             <v-icon>mdi-magnify</v-icon>
           </v-btn>
 
@@ -50,6 +50,9 @@ export default {
   methods: {
     GoToMainPage: function () {
       this.$router.push("/MainPage");
+    },
+    GoToLevel1: function () {
+      this.$router.push("/PageLevel1");
     },
   },
 };
