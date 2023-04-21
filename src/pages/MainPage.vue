@@ -11,6 +11,7 @@
             title="PAINT"
             subtitle="Create your picture"
             icon="paint.png"
+            colorCard="#FBE9E7"
           />
         </v-col>
         <v-col>
@@ -18,12 +19,14 @@
             title="DATA"
             subtitle="See your data"
             icon="analysis.png"
+            colorCard="#ECEFF1"
         /></v-col>
         <v-col>
           <MainCardNavigation
             title="CHAT"
             subtitle="Write with all"
             icon="team-meeting.png"
+            colorCard="#F9FBE7"
           />
         </v-col>
         <v-col>

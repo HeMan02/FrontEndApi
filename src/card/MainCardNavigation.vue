@@ -1,5 +1,6 @@
 <template>
-  <v-card class="mx-auto" max-width="344" outlined>
+  <!-- :color="currVal === value ? '#FFFFFF' : '#000000'"  #ECEFF1-->
+  <v-card class="mx-auto" max-width="344" outlined :color="colorCard">
     <v-list-item three-line>
       <v-list-item-content>
         <div class="text-overline mb-4">{{ title }}</div>
@@ -23,6 +24,8 @@ export default {
     title: String,
     subtitle: String,
     icon: String,
+    nameFunction: String,
+    colorCard: String,
   },
 };
 </script>
