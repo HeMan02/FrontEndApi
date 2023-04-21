@@ -2,7 +2,7 @@
   <div>
     <v-app>
       <div>
-        <v-app-bar color="deep-orange" dense>
+        <v-app-bar color="deep-orange" dense elevation="4" class="white--text">
           <v-app-bar-nav-icon color="white"></v-app-bar-nav-icon>
 
           <v-toolbar-title color="white">Page title</v-toolbar-title>
