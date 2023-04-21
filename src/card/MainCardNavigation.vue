@@ -6,7 +6,6 @@
         <v-list-item-title class="text-h5 mb-1">
           {{ subtitle }}
         </v-list-item-title>
-        <v-text-field label="Main input" hide-details="auto"> </v-text-field>
       </v-list-item-content>
       <v-list-item-avatar tile size="80">
         <v-img v-bind:src="require('../assets/' + icon)"> </v-img>

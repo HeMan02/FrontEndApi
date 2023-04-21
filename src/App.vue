@@ -1,26 +1,25 @@
 <template>
-  <div id="app">
-    <v-app id="inspire">
+  <div>
+    <v-app>
       <div>
-        <v-app-bar color="deep-purple accent-4" dense dark>
-          <v-app-bar-nav-icon></v-app-bar-nav-icon>
+        <v-app-bar color="deep-orange" dense>
+          <v-app-bar-nav-icon color="white"></v-app-bar-nav-icon>
 
-          <v-toolbar-title>Page title</v-toolbar-title>
+          <v-toolbar-title color="white">Page title</v-toolbar-title>
 
           <v-spacer></v-spacer>
 
           <v-btn icon @click="GoToMainPage">
-            <v-icon>mdi-heart</v-icon>
+            <v-icon color="white">mdi-heart</v-icon>
           </v-btn>
-
           <v-btn icon @click="GoToLevel1">
-            <v-icon>mdi-magnify</v-icon>
+            <v-icon color="white">mdi-magnify</v-icon>
           </v-btn>
 
           <v-menu left bottom>
             <template v-slot:activator="{ on, attrs }">
               <v-btn icon v-bind="attrs" v-on="on">
-                <v-icon>mdi-dots-vertical</v-icon>
+                <v-icon color="white">mdi-dots-vertical</v-icon>
               </v-btn>
             </template>
 
