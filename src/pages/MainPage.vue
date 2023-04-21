@@ -27,6 +27,7 @@
             subtitle="Write with all"
             icon="team-meeting.png"
             colorCard="#F9FBE7"
+            nameFunction="GoToLevel1"
           />
         </v-col>
         <v-col>
