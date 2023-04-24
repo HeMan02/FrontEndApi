@@ -10,7 +10,7 @@
           <v-spacer></v-spacer>
 
           <v-btn icon @click="GoToMainPage">
-            <v-icon color="white">mdi-heart</v-icon>
+            <v-icon color="white">mdi-home</v-icon>
           </v-btn>
           <v-btn icon @click="GoToLevel1">
             <v-icon color="white">mdi-magnify</v-icon>

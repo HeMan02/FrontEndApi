@@ -13,7 +13,7 @@
       </v-list-item-avatar>
     </v-list-item>
     <v-card-actions>
-      <v-btn color="blue" outlined rounded text @click="nameFunction">GO</v-btn>
+      <v-btn color="blue" outlined rounded text @click="ChangePage()">GO</v-btn>
     </v-card-actions>
   </v-card>
 </template>
@@ -24,7 +24,7 @@ export default {
     title: String,
     subtitle: String,
     icon: String,
-    nameFunction: String,
+    page: String,
     colorCard: String,
   },
 
@@ -35,6 +35,10 @@ export default {
     GoToLevel1: function () {
       console.log("AAAAA");
       this.$router.push("/PageLevel1");
+    },
+    ChangePage: function () {
+      console.log("AAAAA");
+      this.$router.push("/" + this.page);
     },
   },
 };
