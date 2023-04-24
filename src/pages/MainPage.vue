@@ -7,6 +7,7 @@
       >
         <div class="text-center">
           <h1 class="text-h4 font-weight-thin mb-4">BubbleShort</h1>
+          <v-spacer></v-spacer>
           <h2>This project use more functions</h2>
         </div>
 
