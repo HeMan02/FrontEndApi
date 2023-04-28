@@ -12,7 +12,7 @@
           <v-btn icon @click="GoToMainPage">
             <v-icon color="white">mdi-home</v-icon>
           </v-btn>
-          <v-btn icon @click="GoToLevel1">
+          <v-btn icon @click="TestApi">
             <v-icon color="white">mdi-magnify</v-icon>
           </v-btn>
 
@@ -39,6 +39,7 @@
 </template>
 
 <script>
+import mainApi from "./service/MainApi.js";
 export default {
   name: "App",
 
@@ -52,6 +53,12 @@ export default {
     },
     GoToLevel1: function () {
       this.$router.push("/PageLevel1");
+    },
+    TestApi: function () {
+      console.log("API");
+      mainApi.GetValueTest().then((response) => {
+        response.data;
+      });
     },
   },
 };
