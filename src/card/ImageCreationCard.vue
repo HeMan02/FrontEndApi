@@ -1,0 +1,74 @@
+<template>
+  <!-- :color="currVal === value ? '#FFFFFF' : '#000000'"  #ECEFF1-->
+  <v-card class="mx-auto" max-width="344" outlined :color="colorCard">
+    <v-list-item three-line>
+      <v-list-item-content>
+        <div class="text-overline mb-4">{{ title }}</div>
+        <v-list-item-title class="text-h5 mb-1">
+          {{ subtitle }}
+        </v-list-item-title>
+      </v-list-item-content>
+      <v-list-item-avatar tile size="80">
+        <v-img v-bind:src="require('../assets/' + icon)"> </v-img>
+      </v-list-item-avatar>
+    </v-list-item>
+    <v-card-actions>
+      <v-container fluid>
+        <v-row>
+          <v-col cols="12" md="12">
+            <v-textarea
+              solo
+              name="input-7-4"
+              label="Solo textarea"
+              v-model="inputText"
+            ></v-textarea>
+          </v-col>
+        </v-row>
+        <v-row>
+          <v-btn
+            color="blue"
+            outlined
+            rounded
+            text
+            @click="StartCreationImage()"
+            >GO</v-btn
+          ></v-row
+        >
+      </v-container>
+    </v-card-actions>
+  </v-card>
+</template>
+
+<script>
+import mainApi from "../service/MainApi.js";
+export default {
+  props: {
+    title: String,
+    subtitle: String,
+    icon: String,
+    page: String,
+    colorCard: String,
+  },
+
+  data: () => ({ inputText: "" }),
+
+  methods: {
+    GoToMainPage: function () {
+      this.$router.push("/MainPage");
+    },
+    GoToLevel1: function () {
+      console.log("AAAAA");
+      this.$router.push("/PageLevel1");
+    },
+    StartCreationImage: function () {
+      console.log("Start Creation Image");
+      console.log(" BBBB " + this.inputText);
+      let formData = new FormData();
+      formData.append("inputText", this.inputText);
+      mainApi.CreateImage(formData).then((response) => {
+        response.data;
+      });
+    },
+  },
+};
+</script>
