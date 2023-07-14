@@ -45,8 +45,13 @@
     <v-row>
       <v-col>
         <v-card class="mx-auto" max-width="344" outlined>
-          <v-img v-bind:src="require('../assets/' + icon)">
-          </v-img> </v-card></v-col></v-row
+          <v-img
+            v-if="imageAdd"
+            v-bind:src="require('../assets/imageToAdd.png')"
+            @error="pictureLoadingError"
+             />
+          </v-img>
+ </v-card></v-col></v-row
   ></v-container>
 </template>
 
@@ -60,9 +65,10 @@ export default {
     page: String,
     colorCard: String,
     imageCreated: String,
+    imageAdd: false,
   },
 
-  data: () => ({ inputText: "" }),
+  data: () => ({ inputText: "",backupSrc: 'https://via.placeholder.com/300.png/09f/fff', }),
 
   methods: {
     GoToMainPage: function () {
@@ -73,6 +79,7 @@ export default {
       this.$router.push("/PageLevel1");
     },
     StartCreationImage: function () {
+      this.imageAdd = false;
       console.log("Start Creation Image");
       console.log(" BBBB " + this.inputText);
       let formData = new FormData();
@@ -80,7 +87,12 @@ export default {
       mainApi.CreateImage(formData).then((response) => {
         console.log("PATH :" + response.data);
         this.imageCreated = response.data;
+        this.imageAdd = true;
       });
+    },
+     pictureLoadingError: function() {
+      console.log("GGGGGGGGG");
+      this.didLoad = false;
     },
   },
 };
