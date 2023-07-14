@@ -1,17 +1,22 @@
 <template>
   <div id="app">
     <v-app id="inspire">
-      <h1>Pdf</h1>
-      <v-row>
-        <v-col>
-          <PdfCreationCard
-            title="PDF"
-            subtitle="Stat Creation"
-            icon="file.png"
-            colorCard="#FBE9E7"
-          />
-        </v-col>
-      </v-row>
+      <v-parallax
+        height="1000"
+        src="https://cdn.wallpapersafari.com/78/71/BRL1nQ.jpg"
+      >
+        <h1>Pdf</h1>
+        <v-row>
+          <v-col>
+            <PdfCreationCard
+              title="PDF"
+              subtitle="Stat Creation"
+              icon="file.png"
+              colorCard="#FBE9E7"
+            />
+          </v-col>
+        </v-row>
+      </v-parallax>
     </v-app>
   </div>
 </template>
