@@ -16,4 +16,13 @@ export default {
         return response;
       });
   },
+  SendMail(formData) {
+    return connectionAxios.apiClient
+      .post("/api/Main/StartSendMail", formData, {
+        headers: { "Content-Type": "multipart/form-data" },
+      })
+      .then((response) => {
+        return response;
+      });
+  },
 };

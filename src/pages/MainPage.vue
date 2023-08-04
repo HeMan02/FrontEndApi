@@ -48,6 +48,17 @@
             />
           </v-col>
         </v-row>
+        <v-row>
+          <v-col>
+            <MainCardNavigation
+              title="MAIL"
+              subtitle="Send your mail"
+              icon="email.png"
+              colorCard="#E0F7FA"
+              page="MailPage"
+            />
+          </v-col>
+        </v-row>
       </v-parallax>
     </v-app>
   </div>
