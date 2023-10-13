@@ -58,6 +58,15 @@
               page="MailPage"
             />
           </v-col>
+          <v-col>
+            <MainCardNavigation
+              title="SAINT OF DAY"
+              subtitle="Get your sant of day"
+              icon="saint.png"
+              colorCard="#E0F7FA"
+              page="SaintPage"
+            />
+          </v-col>
         </v-row>
       </v-parallax>
     </v-app>

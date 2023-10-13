@@ -8,7 +8,7 @@
     >
     </v-img>
 
-    <v-card-subtitle class="pb-0"> Insert your text </v-card-subtitle>
+    <v-card-subtitle class="pb-0"> Title </v-card-subtitle>
 
     <v-container fluid>
       <v-row>
@@ -23,19 +23,10 @@
           ></v-textarea>
         </v-col>
       </v-row>
-      <v-row>
-        <v-col
-          ><v-text-field
-            label="Mail to send"
-            prepend-icon="mdi-email-fast-outline"
-            v-model="inputMail"
-          ></v-text-field
-        ></v-col>
-      </v-row>
     </v-container>
 
     <v-card-actions>
-      <v-btn color="orange" text @click="StartSendMail()"> Send </v-btn>
+      <v-btn color="orange" text @click="StartGetSaintOfDay()"> Update </v-btn>
     </v-card-actions>
   </v-card>
 </template>
@@ -49,12 +40,12 @@ export default {
     GoToMainPage: function () {
       this.$router.push("/MainPage");
     },
-    StartSendMail: function () {
+    StartGetSaintOfDay: function () {
       console.log(" BBBB " + this.inputText);
-      let formData = new FormData();
-      formData.append("inputText", this.inputText);
-      formData.append("inputMail", this.inputMail);
-      mainApi.SendMail(formData).then((response) => {
+      // let formData = new FormData();
+      // formData.append("inputText", this.inputText);
+      // formData.append("inputMail", this.inputMail);
+      mainApi.StartGetSaintOfDay().then((response) => {
         console.log("PATH :" + response.data);
       });
     },

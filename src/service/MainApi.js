@@ -25,4 +25,7 @@ export default {
         return response;
       });
   },
+  StartGetSaintOfDay() {
+    return connectionAxios.apiClient.get("/api/Main/StartGetSaintOfDay");
+  },
 };
