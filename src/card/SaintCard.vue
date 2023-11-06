@@ -26,7 +26,14 @@
     </v-container>
 
     <v-card-actions>
-      <v-btn color="orange" text @click="StartGetSaintOfDay()"> Update </v-btn>
+      <v-btn color="orange" text @click="UploadSaintOnDb()">
+        Upload saint
+      </v-btn>
+    </v-card-actions>
+    <v-card-actions>
+      <v-btn color="orange" text @click="StartGetSaintOfDay()">
+        Get saint
+      </v-btn>
     </v-card-actions>
   </v-card>
 </template>
@@ -41,6 +48,16 @@ export default {
       this.$router.push("/MainPage");
     },
     StartGetSaintOfDay: function () {
+      console.log(" BBBB " + this.inputText);
+      // let formData = new FormData();
+      // formData.append("inputText", this.inputText);
+      // formData.append("inputMail", this.inputMail);
+      mainApi.StartGetSaintOfDay().then((response) => {
+        console.log("GET TABLE SAINT:" + response.data[0].nome);
+      });
+    },
+
+    UploadSaintOnDb: function () {
       console.log(" BBBB " + this.inputText);
       // let formData = new FormData();
       // formData.append("inputText", this.inputText);

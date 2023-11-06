@@ -6,6 +6,14 @@ const apiClient = axios.create({
   headers: {},
 });
 
+const apiSatispay = axios.create({
+  baseURL:
+    "https://staging.authservices.satispay.com/wally-services/protocol/tests/signature",
+  withCredential: false,
+  headers: {},
+});
+
 export default {
   apiClient,
+  apiSatispay,
 };
